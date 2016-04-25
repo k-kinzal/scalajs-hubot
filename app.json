@@ -1,0 +1,8 @@
+{
+  "name": "scalajs-hubot",
+  "env": {
+    "HUBOT_CHATWORK_TOKEN": "",
+    "HUBOT_CHATWORK_ROOMS": "",
+    "HUBOT_CHATWORK_API_RATE": "350"
+  }
+}

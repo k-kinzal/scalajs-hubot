@@ -1,0 +1,32 @@
+{
+  "name": "scalajs-hubot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .tmp dist",
+    "prepare": "mkdir -p .tmp dist",
+    "scalajsc": "scalajsc -feature $(find src -name '*.scala') -d .tmp",
+    "scalajsld": "scalajsld -o dist/example.js .tmp",
+    "build": "npm run prepare && npm run scalajsc  && npm run scalajsld",
+    "postinstall": "node-java-maven",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "k-kinzal",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "java": {
+    "dependencies": [
+    ]
+  },
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "hubot": "^2.18.0",
+    "hubot-chatwork": "^0.2.0",
+    "hubot-scripts": "^2.16.2",
+    "node-java-maven": "0.0.12",
+    "scalajs-standalone-bin": "^0.4.3"
+  }
+}
